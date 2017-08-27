@@ -17,36 +17,6 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-
-    public void abrirCapture(View v) {
-        Intent intent=new Intent(this, CarritoDeCompras.class);
-        startActivity(intent);
-    }
-
-
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-
-        switch(keyCode){
-            case KeyEvent.KEYCODE_BACK:
-                onBackPressed();
-                return true;
-
-        }
-        return super.onKeyDown(keyCode, event);
-
-    }
-
-    //Metodo listener usado para escuchar el clic en el btn atras dela actionbar
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-
-        return true;
-    }
-
-    @Override
     public void onBackPressed() {
         this.moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
