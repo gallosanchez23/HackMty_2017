@@ -19,10 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" />
-        <activity
-            android:name=".PaymentMethodActivity"
-            android:label="@string/title_activity_payment_method"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".PaymentMethodActivity"></activity>
     </application>
 
 </manifest>

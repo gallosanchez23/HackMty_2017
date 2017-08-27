@@ -11,6 +11,15 @@
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Personal Information"
+        android:textSize="25sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +98,7 @@
             android:ems="10"
             android:fontFamily="sans-serif-condensed"
             android:hint="example@email.com"
-            android:inputType="textPersonName" />
+            android:inputType="textEmailAddress" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,11 +121,11 @@
             android:id="@+id/password_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.09"
             android:ems="10"
             android:fontFamily="sans-serif-condensed"
             android:hint="Enter 8 digits password ..."
-            android:inputType="textPersonName"
-            android:layout_weight="0.09" />
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
@@ -144,7 +153,7 @@
             android:ems="10"
             android:fontFamily="sans-serif-condensed"
             android:hint="Confirm password ... "
-            android:inputType="textPersonName" />
+            android:inputType="textPassword" />
     </LinearLayout>
 
     <Button

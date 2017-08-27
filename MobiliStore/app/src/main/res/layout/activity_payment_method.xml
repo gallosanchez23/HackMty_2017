@@ -1,33 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.hack.mobilistore.PaymentMethodActivity">
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.hack.mobilistore.PaymentMethodActivity"
+    android:weightSum="1">
 
-    <android.support.design.widget.AppBarLayout
+    <TextView
+        android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Billing Information"
+        android:textSize="20sp" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
 
-    </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Card Number" />
 
-    <include layout="@layout/content_payment_method" />
+        <EditText
+            android:id="@+id/card_input"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="1234-5678-9012-3456"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textIsSelectable="false"
+            android:textSize="15sp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.17"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Exp. Date" />
+
+        <EditText
+            android:id="@+id/expdate_input"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="MM/YY"
+            android:inputType="date"
+            android:maxLength="4"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="CSC" />
+
+        <EditText
+            android:id="@+id/csc_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:ems="10"
+            android:hint="123"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.88"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Address" />
+
+        <EditText
+            android:id="@+id/address1_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="line 1"
+            android:inputType="textPersonName"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Address" />
+
+        <EditText
+            android:id="@+id/address2_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.09"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="line 2"
+            android:inputType="textPersonName"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="C.P." />
+
+        <EditText
+            android:id="@+id/cp_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="codigo postal ... "
+            android:inputType="number"
+            android:maxLength="6"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:text="Country" />
+
+        <EditText
+            android:id="@+id/country_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="type your country..."
+            android:inputType="textPersonName"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:text="State" />
+
+        <EditText
+            android:id="@+id/state_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="type your state..."
+            android:inputType="textPersonName"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:text="City" />
+
+        <EditText
+            android:id="@+id/city_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="type your city..."
+            android:inputType="textPersonName"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:text="Phonr Numbrt" />
+
+        <EditText
+            android:id="@+id/phone_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.84"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="(012) 345 6 789"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
-</android.support.design.widget.CoordinatorLayout>
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="finish"
+        android:text="Register" />
+</LinearLayout>
