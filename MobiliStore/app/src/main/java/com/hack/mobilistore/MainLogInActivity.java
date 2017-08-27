@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.hack.mobilistore.preferences.WritePrefencesUser;
+
 public class MainLogInActivity extends AppCompatActivity {
     EditText boxEmail, boxPassword;
     String email, password;
@@ -16,14 +18,17 @@ public class MainLogInActivity extends AppCompatActivity {
 
         boxEmail = (EditText) this.findViewById(R.id.email_input);
         boxPassword = (EditText) this.findViewById(R.id.password_input);
-
     }
 
     public void getLoginInformation(View e){
         email = boxEmail.getText().toString();
         password = boxPassword.getText().toString();
-        System.out.println("Email: " + email);
-        System.out.println("Password: " + password);
+        WritePrefencesUser pref = new WritePrefencesUser(this);
+        pref.setUserID(email);
+        pref.setCompleteName("Log in user");
+        pref.close();
+        Intent k = new Intent(this, Home.class);
+        startActivity(k);
     }
 
     public void signUp(View e){
