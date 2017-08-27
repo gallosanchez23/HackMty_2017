@@ -1,0 +1,17 @@
+nav.navbar.navbar-inverse.navbar-fixed-top.navbar-transparent style="background-color: #04a48c"
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .navbar-brand.navbar-brand-logo
+        = image_tag 'mobilistore_logo.png', { height: 30 }
+
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      ul.nav.navbar-nav.navbar-right
+        li.navbar-login-btn
+          a href='#' style='color: #fff'
+            | Login

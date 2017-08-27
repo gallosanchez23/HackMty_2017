@@ -1,0 +1,28 @@
+default: &default
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  adapter: mysql2
+  username: root
+  password: 
+  host: localhost
+  database: MobiliStore_development
+
+test:
+  <<: *default
+  adapter: mysql2
+  username: root
+  password: 
+  host: localhost
+  database: MobiliStore_test
+
+production:
+  <<: *default
+  adapter: postgresql
+  username: 
+  password: 
+  host: 
+  port: 
+  database: 
