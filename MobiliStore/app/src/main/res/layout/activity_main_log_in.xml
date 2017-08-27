@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:context="com.hack.mobilistore.MainLogInActivity"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="133dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="top|center"
+            android:text="MobiliStore"
+            android:textColor="@android:color/background_light"
+            android:textSize="@android:dimen/notification_large_icon_width" />
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="303dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="example@email.com"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="304dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="type your password ..."
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/log_in_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="107dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="getLoginInformation"
+            android:text="Log In"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/sign_up_button"
+            android:layout_width="321dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_weight="0.41"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="signUp"
+            android:text="Sign Up"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
