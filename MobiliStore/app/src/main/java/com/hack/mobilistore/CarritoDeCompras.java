@@ -8,12 +8,19 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.zxing.client.android.CaptureActivity;
 
+import java.util.ArrayList;
+
 public class CarritoDeCompras extends AppCompatActivity {
+    private static final ArrayList<LinearLayout> articulos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +30,29 @@ public class CarritoDeCompras extends AppCompatActivity {
         //Para que aparezca la flecha atras
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         String codigoBarras = getIntent().getStringExtra("codigoBarras");
-        ((Button)findViewById(R.id.btnCarritoCompras)).setText(codigoBarras==null?"nada":codigoBarras);
+        if (codigoBarras != null) {
+            //We inflate the component
+            LayoutInflater inflater = LayoutInflater.from(this);
+            LinearLayout newArticulo = (LinearLayout)
+                    inflater.inflate(R.layout.panel_articulo_carrito, null, false);
+
+            ((TextView) newArticulo.findViewById(R.id.titleArticulo)).setText("Aguita");
+            ((TextView) newArticulo.findViewById(R.id.articuloCodigo)).setText(codigoBarras);
+            ((TextView) newArticulo.findViewById(R.id.articuloPrecio)).setText("$5");
+
+            articulos.add(newArticulo);
+        }
+
+        //We add the products to the panel
+        final LinearLayout panelArticulos = (LinearLayout) findViewById(R.id.panelListaArticulos);
+        for(int x = 0; x < articulos.size() - (codigoBarras == null ? 0:1); x++) {
+            ((ViewGroup)articulos.get(x).getParent()).removeView(articulos.get(x));
+        }
+        for(int x = 0; x < articulos.size(); x++) {
+            panelArticulos.addView(articulos.get(x));
+        }
     }
 
     public void listenerAddNewProduct(View v) {
