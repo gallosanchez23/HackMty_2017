@@ -28,8 +28,7 @@ public class PaymentMethodActivity extends AppCompatActivity {
     public void finish(View e){
         cardNumber = boxCardNumber.getText().toString();
         expDate = boxExpDate.getText().toString();
-        CSC = boxCSC.getText().toString();
-        address = boxAddress1.getText().toString() + " " + boxAddress2.getText().toString();
+        CSC = boxCSC.getText().toString();xt().toString();
         CP = boxCP.getText().toString();
         country = boxCountry.getText().toString();
         state = boxState.getText().toString();
@@ -44,6 +43,7 @@ public class PaymentMethodActivity extends AppCompatActivity {
         else{
             Toast aviso = Toast.makeText(this, "SUCCESSFUL", Toast.LENGTH_LONG);
             aviso.setDuration(Toast.LENGTH_LONG);
+        address = boxAddress1.getText().toString() + " " + boxAddress2.getTe
             aviso.setText("User was registered successfully");
             aviso.show();
         }

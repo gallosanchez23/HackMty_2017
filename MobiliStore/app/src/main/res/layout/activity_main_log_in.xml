@@ -19,15 +19,16 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="133dp"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="top|center"
-            android:text="MobiliStore"
-            android:textColor="@android:color/background_light"
-            android:textSize="@android:dimen/notification_large_icon_width" />
+
+        <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/imagen"
+            android:layout_weight="0.14" />
+
 
         <EditText
             android:id="@+id/email_input"
