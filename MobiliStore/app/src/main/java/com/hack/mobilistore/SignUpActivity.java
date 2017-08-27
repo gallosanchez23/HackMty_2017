@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.hack.mobilistore.preferences.WritePrefencesUser;
+
 public class SignUpActivity extends AppCompatActivity {
     EditText boxEmail, boxPassword, boxConfirm, boxFirstName, boxLastName;
     String email, password, firstName, lastName, confirm;
@@ -40,6 +42,10 @@ public class SignUpActivity extends AppCompatActivity {
         }
         else if(password.equals(confirm)){
             if(password.length()>=8 && confirm.length()>=8){
+                WritePrefencesUser pref = new WritePrefencesUser(this);
+                pref.setUserID(email);
+                pref.setCompleteName(firstName + " " + lastName);
+                pref.close();
                 Intent k = new Intent(this, PaymentMethodActivity.class);
                 startActivity(k);
             }

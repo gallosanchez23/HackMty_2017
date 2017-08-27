@@ -21,7 +21,7 @@ public final class WritePrefencesUser extends PreferencesUser {
         editor.putString("UserID", user);
     }
 
-    public final void setUserCompleteName(String completeName) {
+    public final void setCompleteName(String completeName) {
         editor.putString("UserCompleteName", completeName);
     }
 

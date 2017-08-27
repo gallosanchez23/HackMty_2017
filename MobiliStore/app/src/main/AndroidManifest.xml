@@ -47,7 +47,7 @@
                 android:value="com.hack.mobilistore.BeaconActivity" />
         </activity>
         <activity android:name=".BeaconActivity" />
-        <activity android:name=".MainLogInActivity">
+        <activity android:name=".Home">
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".PaymentMethodActivity"></activity>
@@ -114,7 +114,7 @@
                     android:scheme="zxing" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home">
+        <activity android:name=".MainLogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
