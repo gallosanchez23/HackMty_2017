@@ -41,6 +41,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hack.mobilistore.CartActivity;
 import com.hack.mobilistore.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
@@ -495,7 +496,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private void handleDecodeInternally(Result rawResult, ResultHandler resultHandler, Bitmap barcode) {
 
     String resultado = String.valueOf(rawResult);
-    Intent i = new Intent(thiis, CarritoDeCompras.class);///TODO///////////////////////////////////////////////////////////////////
+    Intent i = new Intent(thiis, CartActivity.class);///TODO///////////////////////////////////////////////////////////////////
     i.putExtra("codigoBarras", resultado);
     startActivity(i);
 
