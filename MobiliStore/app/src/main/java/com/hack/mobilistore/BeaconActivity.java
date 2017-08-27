@@ -15,8 +15,8 @@ public class BeaconActivity extends AppCompatActivity {
     private BeaconManager beaconManager;
 
     @Override
-    public void onCreate() {
-        super.onCreate();
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         beaconManager = new BeaconManager(getApplicationContext());
         beaconManager.setMonitoringListener(new BeaconManager.BeaconMonitoringListener() {

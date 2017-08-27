@@ -1,6 +1,23 @@
 <resources>
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="padding_frames">16dp</dimen>
+    <dimen name="padding_inicioyfin">2dp</dimen>
+
+    <!-- Tamano letra -->
+    <dimen name="letra_titulos">27sp</dimen>
+    <dimen name="letra_grande">25sp</dimen>
+    <dimen name="letra_mediana">20sp</dimen>
+    <dimen name="letra_texto">15sp</dimen>
+
+    <!-- separaciones -->
+    <dimen name="salto_secciones">30dp</dimen>
+    <dimen name="salto_titulos">3dp</dimen>
+    <dimen name="sangria_izquierda">5dp</dimen>
 </resources>
