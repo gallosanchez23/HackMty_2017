@@ -25,13 +25,11 @@ public class MyApplication extends Application {
         beaconManager.setMonitoringListener(new BeaconManager.BeaconMonitoringListener() {
             @Override
             public void onEnteredRegion(BeaconRegion region, List<Beacon> beacons) {
-                showNotification(
-                        "Hola Gallo",
-                        "Me la pelas");
+                showNotification("You entered a new store", "You can start our shopping!");
             }
             @Override
             public void onExitedRegion(BeaconRegion region) {
-                // could add an "exit" notification too if you want (-:
+                showNotification("Thanks for shopping with us", "See you soon!");
             }
         });
         beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
@@ -45,6 +43,7 @@ public class MyApplication extends Application {
     }
 
     public void showNotification(String title, String message) {
+
         Intent notifyIntent = new Intent(this, BeaconActivity.class);
         notifyIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivities(this, 0,
@@ -60,5 +59,6 @@ public class MyApplication extends Application {
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(1, notification);
+
     }
 }
