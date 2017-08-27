@@ -44,8 +44,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.hack.mobilistore.BeaconActivity" />
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".MainLogInActivity">
+        </activity>
+=======
         <activity android:name=".BeaconActivity" />
         <activity android:name=".Home" />
+>>>>>>> 1a79eb592a400de8f743a2c8985504adcb7a5046
         <activity android:name=".SignUpActivity" />
         <activity android:name=".PaymentMethodActivity" />
 
