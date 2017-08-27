@@ -1,5 +1,6 @@
 package com.hack.mobilistore;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,8 @@ public class PaymentMethodActivity extends AppCompatActivity {
     public void finish(View e){
         cardNumber = boxCardNumber.getText().toString();
         expDate = boxExpDate.getText().toString();
-        CSC = boxCSC.getText().toString();//xt().toString();
+        address = boxAddress1.getText().toString() + " " + boxAddress2.getText().toString();
+        CSC = boxCSC.getText().toString();
         CP = boxCP.getText().toString();
         country = boxCountry.getText().toString();
         state = boxState.getText().toString();
@@ -46,6 +48,8 @@ public class PaymentMethodActivity extends AppCompatActivity {
             //address = boxAddress1.getText().toString() + " " + boxAddress2.getTe
             aviso.setText("User was registered successfully");
             aviso.show();
+            Intent k = new Intent(this, Home.class);
+            startActivity(k);
         }
     }
 }

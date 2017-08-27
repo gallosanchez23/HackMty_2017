@@ -55,8 +55,33 @@ public class Home extends AppCompatActivity {
         System.exit(1);
     }
 
+<<<<<<< HEAD
     public void goToCarritoDeCompras(View v) {
             Intent k = new Intent(this, CarritoDeCompras.class);
             startActivity(k);
+=======
+    public void gotoNews(View w){
+        Intent k = new Intent(this, NewsFeedActivity.class);
+        k.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(k);
+    }
+
+    public void gotoSearch(View w){
+        Intent k = new Intent(this, SearchActivity.class);
+        k.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(k);
+    }
+
+    public void gotoCart(View w){
+        Intent k = new Intent(this, CartActivity.class);
+        k.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(k);
+    }
+
+    public void gotoHome(View w){
+        Intent k = new Intent(this, Home.class);
+        k.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(k);
+>>>>>>> 1a79eb592a400de8f743a2c8985504adcb7a5046
     }
 }
