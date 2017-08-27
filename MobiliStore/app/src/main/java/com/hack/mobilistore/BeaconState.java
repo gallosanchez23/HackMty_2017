@@ -10,23 +10,25 @@ import java.util.List;
 import java.util.UUID;
 import com.estimote.coresdk.observation.region.beacon.BeaconRegion;
 
-public class BeaconActivity extends AppCompatActivity {
+import static com.estimote.coresdk.common.config.EstimoteSDK.getApplicationContext;
 
+public class BeaconState {
+    public boolean adentro;
     private BeaconManager beaconManager;
+    private Bundle savedInstanceState;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public BeaconState(Bundle savedInstanceState) {
+        this.savedInstanceState = savedInstanceState;
 
         beaconManager = new BeaconManager(getApplicationContext());
         beaconManager.setMonitoringListener(new BeaconManager.BeaconMonitoringListener() {
             @Override
             public void onEnteredRegion(BeaconRegion region, List<Beacon> beacons) {
-
+                adentro = true;
             }
             @Override
             public void onExitedRegion(BeaconRegion region) {
-                
+                adentro = false;
             }
         });
         beaconManager.connect(new BeaconManager.ServiceReadyCallback() {

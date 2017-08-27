@@ -31,7 +31,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="right"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="469dp">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"

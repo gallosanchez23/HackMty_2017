@@ -6,14 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.zxing.client.android.CaptureActivity;
 
 public class Home extends AppCompatActivity {
-
+    Bundle savedInstanceState;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.savedInstanceState = savedInstanceState;
         setContentView(R.layout.activity_home);
     }
 
@@ -44,12 +46,17 @@ public class Home extends AppCompatActivity {
         onBackPressed();
 
         return true;
-    }
 
+}
     @Override
     public void onBackPressed() {
         this.moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
+    }
+
+    public void goToCarritoDeCompras(View v) {
+            Intent k = new Intent(this, CarritoDeCompras.class);
+            startActivity(k);
     }
 }
