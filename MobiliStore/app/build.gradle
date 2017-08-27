@@ -31,5 +31,6 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:25.3.1'
     compile 'com.estimote:sdk:1.1.0'
     compile 'com.google.zxing:android-core:3.2.1'
+    compile 'com.google.code.gson:gson:2.3.1'
     testCompile 'junit:junit:4.12'
 }
